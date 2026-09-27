@@ -1,0 +1,2228 @@
+:root {
+    --navy: #0D2B3E;
+    --gold: #D4A23A;
+    --slate: #6D7F89;
+    --off-white: #F2EFEA;
+    --light-gray: #F8F8F8;
+    --white: #ffffff;
+    --dark: #081F2D;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--navy);
+    background: var(--light-gray);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    background: var(--navy);
+    color: var(--white);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 170px;
+    height: auto;
+    display: block;
+}
+
+
+/* NAV LINKS */
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--gold);
+}
+
+
+/* NAV BUTTON */
+
+.nav-button {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 18px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+/* WHATSAPP BUTTON */
+
+.whatsapp-button {
+    border: 1px solid var(--gold);
+    color: var(--white);
+    background: var(--navy);
+    padding: 10px 18px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 700px;
+
+    background-image:
+        linear-gradient(
+            rgba(13, 43, 62, 0.70),
+            rgba(13, 43, 62, 0.85)
+        ),
+        url("../images/destinations/dubai.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 90px);
+    line-height: 0.98;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-text {
+    max-width: 650px;
+    font-size: 18px;
+    color: #e6e9eb;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button {
+    display: inline-block;
+    padding: 14px 25px;
+    border: 1px solid var(--gold);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-button {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.primary-button:hover {
+    background: var(--white);
+    border-color: var(--white);
+}
+
+.secondary-button {
+    color: var(--white);
+}
+
+.secondary-button:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+.section-heading.centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-heading h2,
+.about h2,
+.enquiry h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.section-heading h2 span,
+.about h2 span,
+.contact h2 span {
+    color: var(--gold);
+}
+
+.section-heading > p:not(.eyebrow) {
+    color: var(--slate);
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: var(--off-white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 35px 28px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(13, 43, 62, 0.10);
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.service-card p {
+    color: var(--slate);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.service-card a:hover {
+    color: var(--navy);
+}
+
+
+/* =========================
+   DESTINATIONS
+========================= */
+
+.destinations {
+    background: var(--light-gray);
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.destination-card {
+    height: 400px;
+    color: var(--white);
+    padding: 25px;
+
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+}
+
+.destination-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 35%,
+        rgba(13, 43, 62, 0.90)
+    );
+}
+
+.destination-card div {
+    position: relative;
+    z-index: 1;
+}
+
+.destination-card span {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.destination-card h3 {
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+
+/* DESTINATION PHOTOS */
+
+.destination-one {
+    background-image:
+        url("../images/destinations/dubai.jpg");
+}
+
+.destination-two {
+    background-image:
+        url("../images/destinations/zanzibar.jpg");
+}
+
+.destination-three {
+    background-image:
+        url("../images/destinations/paris.jpg");
+}
+
+.destination-four {
+    background-image:
+        url("../images/destinations/guangzhou.jpg");
+}
+
+
+/* =========================
+   WHY BULAYI
+========================= */
+
+.about {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-content > p:not(.eyebrow) {
+    color: #dce2e5;
+    margin-bottom: 20px;
+    max-width: 550px;
+}
+
+.trust-box {
+    border-left: 1px solid var(--gold);
+    padding-left: 35px;
+}
+
+.trust-item {
+    display: flex;
+    gap: 25px;
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.trust-item strong {
+    color: var(--gold);
+    font-size: 20px;
+}
+
+.trust-item h3 {
+    margin-bottom: 5px;
+}
+
+.trust-item p {
+    color: #bfcbd1;
+}
+
+
+/* =========================
+   ENQUIRY
+========================= */
+
+.enquiry {
+    background: var(--off-white);
+}
+
+.enquiry-box {
+    background: var(--navy);
+    color: var(--white);
+
+    padding: 70px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+}
+
+.enquiry-content p:not(.eyebrow) {
+    color: #cbd5da;
+}
+
+.enquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    outline: none;
+
+    background: var(--white);
+
+    font: inherit;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+    outline: 2px solid var(--gold);
+}
+
+.enquiry-form textarea {
+    resize: vertical;
+}
+.enquiry-form select {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    outline: none;
+
+    background: var(--white);
+    color: var(--dark);
+
+    font: inherit;
+    cursor: pointer;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 90px 0;
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contact h2 {
+    font-size: clamp(45px, 6vw, 70px);
+    line-height: 1;
+}
+
+.contact h2 span {
+    color: var(--white);
+}
+
+.contact-details {
+    display: grid;
+    gap: 25px;
+}
+
+.contact-details small {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contact-details p {
+    font-size: 18px;
+}
+.contact-details a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--dark);
+    color: var(--white);
+    padding-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-brand p {
+    margin-top: 15px;
+    color: #aebbc2;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer-links a {
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    margin-top: 50px;
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    color: #8999a2;
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: flex;
+    }
+
+    .services-grid,
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid,
+    .enquiry-box,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .enquiry-box {
+        padding: 40px 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .logo img {
+        width: 125px;
+    }
+
+    .services-grid,
+    .destination-grid,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .nav-button {
+        display: flex;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .destination-card {
+        height: 350px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.success-message {
+    background: #F2EFEA;
+    border-left: 5px solid #D4A23A;
+    padding: 20px 24px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    color: #0D2B3E;
+}
+
+.success-message strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.success-message p {
+    margin: 0;
+    color: #6D7F89;
+}
+/* ================= KENYA DESTINATIONS ================= */
+
+.destination-card.nairobi {
+    background-image: url("../images/destinations/nairobi.jpg");
+}
+
+.destination-card.mombasa {
+    background-image: url("../images/destinations/mombasa.jpg");
+}
+
+.destination-card.kisumu {
+    background-image: url("../images/destinations/kisumu.jpg");
+}
+
+.destination-card.nakuru {
+    background-image: url("../images/destinations/nakuru.jpg");
+}
+
+.destination-card.eldoret {
+    background-image: url("../images/destinations/eldoret.jpg");
+}
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+/* MOBILE NAVBAR */
+.navbar {
+    padding: 12px 0;
+    overflow-x: auto;
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 18px;
+    min-width: max-content;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.navbar nav {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 14px;
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+.navbar nav a {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.nav-button,
+.whatsapp-button {
+    width: auto;
+    margin-top: 0;
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+    /* Hero */
+    .hero {
+        min-height: 600px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* General sections */
+    .section {
+        padding: 60px 20px;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Destinations */
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        height: 350px;
+    }
+
+    /* About / Why Bulayi */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .enquiry-form input,
+    .enquiry-form select,
+    .enquiry-form textarea {
+        width: 100%;
+    }
+
+    /* Buttons */
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+    }
+}
+
+/* ================= FLOATING WHATSAPP ================= */
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    background: #25D366;
+    color: #ffffff;
+
+    padding: 13px 20px;
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 24px rgba(0, 0, 0, 0.30);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .floating-whatsapp {
+        right: 18px;
+        bottom: 18px;
+        padding: 12px 17px;
+        font-size: 14px;
+    }
+
+    .whatsapp-icon {
+        font-size: 20px;
+    }
+}
+/* ================= MOBILE HAMBURGER MENU ================= */
+
+.menu-toggle {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        overflow: visible;
+    }
+
+    .nav-container {
+        width: 100%;
+        min-width: 0;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 5px;
+        line-height: 1;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        box-sizing: border-box;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        margin: 0;
+    }
+
+    .nav-menu nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        font-size: 15px;
+        white-space: normal;
+    }
+
+    .nav-menu .whatsapp-button,
+    .nav-menu .nav-button {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin: 0;
+    }
+}
+/* ================= DESTINATION PAGE ================= */
+
+.destination-hero {
+    position: relative;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.dubai-hero {
+    background-image: url("../images/dubai.jpg");
+}
+
+.destination-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(13, 43, 62, 0.88),
+        rgba(13, 43, 62, 0.45),
+        rgba(13, 43, 62, 0.15)
+    );
+}
+
+.destination-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 650px;
+    padding: 100px 0;
+}
+
+.destination-hero-content h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1;
+    margin: 15px 0 25px;
+}
+
+.destination-hero-content p:not(.eyebrow) {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 580px;
+    margin-bottom: 35px;
+}
+
+
+/* Dubai attraction images */
+.destination-card-image img {
+    width: 220px;
+    max-width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .destination-card-image img {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+/* Dubai attraction photos */
+.destination-card-image {
+    text-align: center;
+}
+
+.destination-card-image img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .destination-card-image img {
+        width: 160px;
+        height: 105px;
+    }
+}
+
+/* ================= KENYA DESTINATION CARDS ================= */
+
+.destination-card.nairobi,
+.destination-card.mombasa,
+.destination-card.kisumu,
+.destination-card.nakuru,
+.destination-card.eldoret {
+    position: relative;
+    min-height: 280px;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    isolation: isolate;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Individual destination photographs */
+
+.destination-card.nairobi {
+    background-image: url("../images/destinations/nairobi.jpg");
+    background-position: center;
+}
+
+.destination-card.mombasa {
+    background-image: url("../images/destinations/mombasa.jpg");
+    background-position: center;
+}
+
+.destination-card.kisumu {
+    background-image: url("../images/destinations/kisumu.jpg");
+    background-position: center;
+}
+
+.destination-card.nakuru {
+    background-image: url("../images/destinations/nakuru.jpg");
+    background-position: center;
+}
+
+.destination-card.eldoret {
+    background-image: url("../images/destinations/eldoret.jpg");
+    background-position: center;
+}
+
+/* Elegant image overlay */
+
+.destination-card.nairobi::before,
+.destination-card.mombasa::before,
+.destination-card.kisumu::before,
+.destination-card.nakuru::before,
+.destination-card.eldoret::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(13, 43, 62, 0.94) 0%,
+            rgba(13, 43, 62, 0.62) 38%,
+            rgba(13, 43, 62, 0.08) 78%,
+            rgba(13, 43, 62, 0.02) 100%
+        );
+    z-index: -1;
+}
+
+/* Destination information */
+
+.destination-card.nairobi > div,
+.destination-card.mombasa > div,
+.destination-card.kisumu > div,
+.destination-card.nakuru > div,
+.destination-card.eldoret > div {
+    width: 100%;
+    padding: 26px;
+    position: relative;
+    z-index: 2;
+}
+
+.destination-card.nairobi span,
+.destination-card.mombasa span,
+.destination-card.kisumu span,
+.destination-card.nakuru span,
+.destination-card.eldoret span {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #D4A23A;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.destination-card.nairobi h3,
+.destination-card.mombasa h3,
+.destination-card.kisumu h3,
+.destination-card.nakuru h3,
+.destination-card.eldoret h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+/* Explore indicator */
+
+.destination-card.nairobi > div::after,
+.destination-card.mombasa > div::after,
+.destination-card.kisumu > div::after,
+.destination-card.nakuru > div::after,
+.destination-card.eldoret > div::after {
+    content: "Explore destination  →";
+    display: block;
+    margin-top: 13px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* Hover */
+
+.destination-card.nairobi:hover,
+.destination-card.mombasa:hover,
+.destination-card.kisumu:hover,
+.destination-card.nakuru:hover,
+.destination-card.eldoret:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(13, 43, 62, 0.22);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .destination-card.nairobi,
+    .destination-card.mombasa,
+    .destination-card.kisumu,
+    .destination-card.nakuru,
+    .destination-card.eldoret {
+        min-height: 230px;
+        border-radius: 15px;
+    }
+
+    .destination-card.nairobi > div,
+    .destination-card.mombasa > div,
+    .destination-card.kisumu > div,
+    .destination-card.nakuru > div,
+    .destination-card.eldoret > div {
+        padding: 21px;
+    }
+
+    .destination-card.nairobi h3,
+    .destination-card.mombasa h3,
+    .destination-card.kisumu h3,
+    .destination-card.nakuru h3,
+    .destination-card.eldoret h3 {
+        font-size: 1.65rem;
+    }
+
+}
+
+/* =========================================================
+   KENYA DESTINATION PAGES
+   ========================================================= */
+
+.kenya-destination-hero {
+    position: relative;
+    min-height: 470px;
+    margin: 0 0 70px;
+    padding: 100px 70px;
+    border-radius: 0 0 28px 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    isolation: isolate;
+}
+
+/* Nairobi hero */
+
+.nairobi-hero {
+    background-image: url("../images/destinations/nairobi.jpg");
+}
+
+/* Dark professional overlay */
+
+.kenya-destination-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(13, 43, 62, 0.94) 0%,
+            rgba(13, 43, 62, 0.70) 48%,
+            rgba(13, 43, 62, 0.20) 100%
+        );
+    z-index: -1;
+}
+
+.kenya-destination-hero::after {
+    content: "";
+    position: absolute;
+    left: 70px;
+    bottom: 48px;
+    width: 55px;
+    height: 4px;
+    background: #D4A23A;
+    border-radius: 5px;
+}
+
+.kenya-destination-hero h1 {
+    max-width: 850px;
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    font-weight: 700;
+}
+
+.kenya-destination-hero p {
+    max-width: 760px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.91);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+/* Main destination sections */
+
+.kenya-destination-content {
+    max-width: 1100px;
+    margin: 0 auto 75px;
+}
+
+.kenya-destination-content h2 {
+    margin-bottom: 15px;
+    color: #0D2B3E;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.kenya-destination-content > p {
+    max-width: 850px;
+    color: #6D7F89;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Service cards */
+
+.kenya-destination-content .destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.kenya-destination-content .destination-card {
+    min-height: 205px;
+    padding: 28px;
+    border: 1px solid rgba(13, 43, 62, 0.08);
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(13, 43, 62, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kenya-destination-content .destination-card::before {
+    display: none;
+}
+
+.kenya-destination-content .destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(13, 43, 62, 0.13);
+}
+
+.kenya-destination-content .destination-card h3 {
+    margin: 0 0 13px;
+    color: #0D2B3E;
+    font-size: 1.12rem;
+    line-height: 1.35;
+}
+
+.kenya-destination-content .destination-card p {
+    margin: 0;
+    color: #6D7F89;
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+/* Gold accent on cards */
+
+.kenya-destination-content .destination-card h3::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 3px;
+    margin-top: 13px;
+    background: #D4A23A;
+    border-radius: 5px;
+}
+
+/* Corporate section */
+
+.corporate-destination-section {
+    padding: 50px;
+    border-radius: 20px;
+    background: #F8F8F8;
+}
+
+.corporate-destination-section h2 {
+    margin-top: 0;
+}
+
+/* CTA */
+
+.destination-cta {
+    max-width: 1100px;
+    margin: 0 auto 70px;
+    padding: 55px 60px;
+    border-radius: 22px;
+    background:
+        linear-gradient(
+            135deg,
+            #0D2B3E 0%,
+            #173D53 100%
+        );
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(13, 43, 62, 0.14);
+}
+
+.destination-cta h2 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.destination-cta p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.7;
+}
+
+.destination-cta .btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 7px;
+    background: #D4A23A;
+    color: #0D2B3E;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.destination-cta .btn:hover {
+    transform: translateY(-2px);
+    background: #e2b34e;
+}
+
+/* Mobile destination pages */
+
+@media (max-width: 900px) {
+
+    .kenya-destination-hero {
+        min-height: 430px;
+        padding: 80px 35px;
+    }
+
+    .kenya-destination-hero::after {
+        left: 35px;
+    }
+
+    .kenya-destination-content .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .kenya-destination-hero {
+        min-height: 430px;
+        margin-bottom: 50px;
+        padding: 70px 22px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .kenya-destination-hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .kenya-destination-hero p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .kenya-destination-hero::after {
+        left: 22px;
+        bottom: 32px;
+    }
+
+    .kenya-destination-content {
+        margin-bottom: 55px;
+    }
+
+    .kenya-destination-content .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .kenya-destination-content .destination-card {
+        min-height: auto;
+        padding: 23px;
+    }
+
+    .corporate-destination-section {
+        padding: 28px 22px;
+    }
+
+    .destination-cta {
+        margin-bottom: 45px;
+        padding: 40px 22px;
+        border-radius: 17px;
+    }
+
+    .destination-cta h2 {
+        font-size: 1.65rem;
+    }
+
+}
+
+/* =========================================================
+   KENYA DESTINATION PAGE HEADER
+   ========================================================= */
+
+body:has(.kenya-destination-hero) header {
+    background: #0D2B3E;
+    border-bottom: 1px solid rgba(212, 162, 58, 0.25);
+}
+
+body:has(.kenya-destination-hero) header .logo img {
+    max-height: 52px;
+    width: auto;
+    display: block;
+}
+
+body:has(.kenya-destination-hero) header nav a {
+    color: #ffffff;
+}
+
+body:has(.kenya-destination-hero) header nav a:hover {
+    color: #D4A23A;
+}
+
+body:has(.kenya-destination-hero) header nav a::after {
+    background: #D4A23A;
+}
+
+
+/* ================= DESTINATION PAGE NAVBAR ================= */
+
+body:has(.kenya-destination-hero) header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+body:has(.kenya-destination-hero) header nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    white-space: nowrap;
+}
+
+body:has(.kenya-destination-hero) header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body:has(.kenya-destination-hero) header nav a:hover {
+    color: #D4A23A;
+}
+
+@media (max-width: 768px) {
+
+    body:has(.kenya-destination-hero) header .container {
+        flex-wrap: nowrap;
+    }
+
+    body:has(.kenya-destination-hero) header nav {
+        gap: 16px;
+        overflow-x: auto;
+    }
+
+}
+
+/* ================= PREMIUM DESTINATION NAVBAR ================= */
+
+body:has(.kenya-destination-hero) header {
+    background: #0D2B3E;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(212, 162, 58, 0.25);
+}
+
+body:has(.kenya-destination-hero) header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+body:has(.kenya-destination-hero) .logo img {
+    width: 145px;
+    height: auto;
+    display: block;
+}
+
+body:has(.kenya-destination-hero) header nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+body:has(.kenya-destination-hero) header nav a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    padding: 8px 0;
+    transition: color 0.25s ease;
+}
+
+body:has(.kenya-destination-hero) header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #D4A23A;
+    border-radius: 5px;
+    transition: width 0.25s ease;
+}
+
+body:has(.kenya-destination-hero) header nav a:hover {
+    color: #D4A23A;
+}
+
+body:has(.kenya-destination-hero) header nav a:hover::after {
+    width: 100%;
+}
+
+/* Destinations active state */
+
+body:has(.kenya-destination-hero) header nav a[href*="destinations"] {
+    color: #D4A23A;
+}
+
+body:has(.kenya-destination-hero) header nav a[href*="destinations"]::after {
+    width: 100%;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    body:has(.kenya-destination-hero) header {
+        padding: 10px 0;
+    }
+
+    body:has(.kenya-destination-hero) header .container {
+        gap: 18px;
+        flex-wrap: nowrap;
+    }
+
+    body:has(.kenya-destination-hero) .logo img {
+        width: 125px;
+    }
+
+    body:has(.kenya-destination-hero) header nav {
+        gap: 20px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    body:has(.kenya-destination-hero) header nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    body:has(.kenya-destination-hero) header nav a {
+        font-size: 0.82rem;
+        flex-shrink: 0;
+    }
+
+}
+
+/* ================= MOMBASA DESTINATION HERO ================= */
+
+.mombasa-hero {
+    background-image: url("../images/destinations/mombasa.jpg");
+    background-position: center;
+}
+
+
+/* ================= KISUMU DESTINATION HERO ================= */
+
+.kisumu-hero {
+    background-image: url("../images/destinations/kisumu.jpg");
+    background-position: center;
+}
+
+
+/* ================= NAKURU DESTINATION HERO ================= */
+
+.nakuru-hero {
+    background-image: url("../images/destinations/nakuru.jpg");
+    background-position: center;
+}
+
+/* ================= DESTINATION DID YOU KNOW ================= */
+
+.destination-facts {
+    max-width: 1100px;
+    margin: 0 auto 75px;
+    padding: 55px;
+    border-radius: 22px;
+    background: #0D2B3E;
+    color: #ffffff;
+}
+
+.destination-facts-heading {
+    margin-bottom: 35px;
+}
+
+.destination-facts-heading span {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #D4A23A;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.destination-facts-heading h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.destination-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.destination-fact {
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.destination-fact > span {
+    color: #D4A23A;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.destination-fact h3 {
+    margin: 14px 0 10px;
+    color: #ffffff;
+    font-size: 1.15rem;
+}
+
+.destination-fact p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .destination-facts {
+        padding: 35px 25px;
+        border-radius: 18px;
+    }
+
+    .destination-facts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= ELDORET DESTINATION HERO ================= */
+
+.eldoret-hero {
+    background-image: url("../images/destinations/eldoret.jpg");
+    background-position: center;
+}
+
+/* ================= PREMIUM DID YOU KNOW SECTION ================= */
+
+.destination-facts {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto 75px;
+    padding: 60px;
+    border-radius: 24px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            135deg,
+            #0D2B3E 0%,
+            #12384F 60%,
+            #173D53 100%
+        );
+    box-shadow: 0 18px 40px rgba(13, 43, 62, 0.16);
+}
+
+.destination-facts::before {
+    content: "";
+    position: absolute;
+    top: -90px;
+    right: -90px;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(212, 162, 58, 0.22);
+    border-radius: 50%;
+}
+
+.destination-facts::after {
+    content: "";
+    position: absolute;
+    bottom: -110px;
+    left: -80px;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.destination-facts-heading {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 38px;
+}
+
+.destination-facts-heading span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 12px;
+    color: #D4A23A;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+}
+
+.destination-facts-heading span::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: #D4A23A;
+    border-radius: 4px;
+}
+
+.destination-facts-heading h2 {
+    max-width: 600px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    line-height: 1.15;
+}
+
+.destination-facts-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.destination-fact {
+    position: relative;
+    min-height: 210px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.055);
+    backdrop-filter: blur(4px);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.destination-fact:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 162, 58, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.destination-fact > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(212, 162, 58, 0.45);
+    border-radius: 50%;
+    color: #D4A23A;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.destination-fact h3 {
+    margin: 0 0 11px;
+    color: #ffffff;
+    font-size: 1.16rem;
+    line-height: 1.3;
+}
+
+.destination-fact p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+
+/* ================= DID YOU KNOW MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .destination-facts {
+        margin-bottom: 55px;
+        padding: 38px 24px;
+        border-radius: 19px;
+    }
+
+    .destination-facts-heading {
+        margin-bottom: 28px;
+    }
+
+    .destination-facts-heading h2 {
+        font-size: 1.85rem;
+    }
+
+    .destination-facts-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .destination-fact {
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .destination-fact > span {
+        margin-bottom: 14px;
+    }
+}
+
+/* ================= PARIS ATTRACTION PHOTO CARDS ================= */
+
+.destination-info-card .destination-card-image {
+    width: calc(100% + 48px);
+    height: 210px;
+    margin: -24px -24px 24px;
+    overflow: hidden;
+    background: #F2EFEA;
+}
+
+.destination-info-card .destination-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s ease;
+}
+
+.destination-info-card:hover .destination-card-image img {
+    transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+    .destination-info-card .destination-card-image {
+        height: 190px;
+    }
+}
+
+/* ================= PARIS DESTINATION HERO ================= */
+
+.paris-hero {
+    background-image: url("../images/destinations/paris/eifel%20tower.avif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.paris-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(13, 43, 62, 0.88) 0%,
+            rgba(13, 43, 62, 0.55) 48%,
+            rgba(13, 43, 62, 0.18) 100%
+        );
+    z-index: 1;
+}
+
+.paris-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= RESPONSIVE PARIS HERO IMAGE ================= */
+
+.paris-hero {
+    min-height: 620px;
+    background-image: url("../images/destinations/paris/eifel%20tower.avif");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+    .paris-hero {
+        min-height: 620px;
+        background-position: center center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .paris-hero {
+        min-height: 680px;
+        background-position: center center;
+    }
+}
+
+/* ================= PARIS ATTRACTION IMAGES ================= */
+
+.paris-hero {
+    background-image: url("../images/destinations/paris/eifel%20tower.avif");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.destination-info-card .destination-card-image {
+    width: 100%;
+    height: 220px;
+    margin: 0 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #F2EFEA;
+}
+
+.destination-info-card .destination-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}
+
+.destination-info-card:hover .destination-card-image img {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .destination-info-card .destination-card-image {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+/* ================= GUANGZHOU HERO ================= */
+
+.destination-hero {
+    background-image:
+        linear-gradient(rgba(13, 43, 62, 0.45), rgba(13, 43, 62, 0.70)),
+        url("../images/destinations/guangzhou/guangzhou.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Guangzhou destination card */
+.destination-card.guangzhou {
+    background-image: url("../images/destinations/guangzhou/guangzhou.jpeg");
+}
+
+/* Guangzhou homepage destination card */
+.destination-card.destination-four {
+    background-image: url("../images/destinations/guangzhou/guangzhou.jpeg");
+}
+
+/* ================= KENYA DESTINATION SECTION IMAGES ================= */
+
+.destination-section-image {
+    width: 100%;
+    margin-top: 18px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.destination-section-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ================= KENYA DESTINATION SECTION IMAGES ================= */
+
+.destination-section-image {
+    width: 100%;
+    margin-top: 18px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.destination-section-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Larger Kenya destination section photos */
+.destination-section-image {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.destination-section-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .destination-section-image img {
+        height: 260px;
+    }
+}
+
+
+/* ================= KENYA TRAVEL SERVICES GRID ================= */
+
+.kenya-travel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.kenya-travel-grid .destination-card {
+    width: 100%;
+}
+
+.kenya-travel-grid .destination-section-image {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.kenya-travel-grid .destination-section-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .kenya-travel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kenya-travel-grid .destination-section-image img {
+        height: 260px;
+    }
+}
+
+
+/* ================= FINAL KENYA SERVICE CARD LAYOUT ================= */
+
+.kenya-travel-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 32px !important;
+}
+
+.kenya-travel-grid .destination-card {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 28px !important;
+    background: #ffffff !important;
+    overflow: hidden !important;
+    display: block !important;
+    border-radius: 16px !important;
+}
+
+.kenya-travel-grid .destination-card::before {
+    display: none !important;
+}
+
+.kenya-travel-grid .destination-card h3 {
+    color: #0D2B3E !important;
+    font-size: 1.2rem !important;
+    margin: 0 0 13px !important;
+}
+
+.kenya-travel-grid .destination-card p {
+    color: #6D7F89 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+}
+
+.kenya-travel-grid .destination-section-image {
+    width: 100% !important;
+    height: 300px !important;
+    margin-top: 22px !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+}
+
+.kenya-travel-grid .destination-section-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    .kenya-travel-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .kenya-travel-grid .destination-section-image {
+        height: 260px !important;
+    }
+}
+

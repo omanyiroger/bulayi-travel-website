@@ -1,0 +1,203 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Destinations | Bulayi Travel Agency</title>
+
+    <meta name="description"
+          content="Explore travel destinations with Bulayi Travel Agency, including Dubai, Zanzibar, Paris and Guangzhou. Plan your next journey from Kenya.">
+
+    <link rel="icon" type="image/jpeg"
+          href="{% static 'website/images/bulayi-searchicon-final.jpeg' %}">
+
+    <link rel="canonical" href="https://bulayitravel.com/destinations/">
+
+    <!-- Social sharing / Open Graph -->
+    <meta property="og:title" content="Travel Destinations | Bulayi Travel Agency">
+    <meta property="og:description" content="Explore Dubai, Zanzibar, Paris and Guangzhou with Bulayi Travel Agency. Plan your next journey from Kenya.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bulayitravel.com/destinations/">
+    <meta property="og:image" content="https://bulayitravel.com/static/website/images/bulayi-final.png">
+    <meta property="og:site_name" content="Bulayi Travel Agency">
+
+
+
+    <link rel="stylesheet"
+          href="{% static 'website/css/style.css' %}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="/" class="logo">
+            <img src="{% static 'website/images/bulayi-final.png' %}"
+                 alt="Bulayi Travel Agency">
+        </a>
+
+        <a href="/" class="back-home">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</header>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <p class="eyebrow">
+                EXPLORE THE WORLD
+            </p>
+
+            <h1>
+                Our Destinations
+            </h1>
+
+            <p>
+                Discover exciting destinations and let Bulayi Travel Agency
+                help you plan your journey from Kenya.
+            </p>
+
+        </div>
+
+
+        <div class="destination-info-grid">
+
+            <a href="{% url 'dubai' %}" class="destination-card destination-one">
+                <h2>Dubai</h2>
+                <p>
+                    Discover luxury, modern architecture, desert adventures
+                    and unforgettable experiences in the United Arab Emirates.
+                </p>
+                <strong>Explore Dubai →</strong>
+            </a>
+
+
+            <a href="{% url 'zanzibar' %}" class="destination-card destination-two">
+                <h2>Zanzibar</h2>
+                <p>
+                    Experience beautiful beaches, island culture and
+                    unforgettable coastal adventures.
+                </p>
+                <strong>Explore Zanzibar →</strong>
+            </a>
+
+
+            <a href="{% url 'paris' %}" class="destination-card destination-three">
+                <h2>Paris</h2>
+                <p>
+                    Explore iconic landmarks, culture, fashion and the
+                    unforgettable atmosphere of the French capital.
+                </p>
+                <strong>Explore Paris →</strong>
+            </a>
+
+
+            <a href="{% url 'nairobi' %}" class="destination-card nairobi">
+                <h2>Nairobi</h2>
+                <p>
+                    Kenya's business and travel hub, ideal for corporate,
+                    executive, conference and leisure travel.
+                </p>
+                <strong>Explore Nairobi →</strong>
+            </a>
+
+            <a href="{% url 'eldoret' %}" class="destination-card eldoret">
+                <h2>Eldoret</h2>
+                <p>
+                    A regional centre for business, agriculture, conferences
+                    and institutional travel.
+                </p>
+                <strong>Explore Eldoret →</strong>
+            </a>
+
+            <a href="{% url 'mombasa' %}" class="destination-card mombasa">
+                <h2>Mombasa</h2>
+                <p>
+                    A leading coastal destination for business, conferences,
+                    executive travel and leisure.
+                </p>
+                <strong>Explore Mombasa →</strong>
+            </a>
+
+            <a href="{% url 'kisumu' %}" class="destination-card kisumu">
+    <div>
+        <span>KENYA</span>
+        <h3>Kisumu</h3>
+    </div>
+</a>
+
+<a href="{% url 'nakuru' %}" class="destination-card nakuru">
+    <div>
+        <span>KENYA</span>
+        <h3>Nakuru</h3>
+    </div>
+</a>
+
+<a href="{% url 'guangzhou' %}" class="destination-card guangzhou">
+                <h2>Guangzhou</h2>
+                <p>
+                    Discover a major commercial destination and an important
+                    gateway for business and shopping travel.
+                </p>
+                <strong>Explore Guangzhou →</strong>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="destination-cta">
+
+    <div class="container">
+
+        <p class="eyebrow">
+            READY TO TRAVEL?
+        </p>
+
+        <h2>
+            Let's plan your next journey.
+        </h2>
+
+        <p>
+            Tell Bulayi where you want to go and we'll help you plan the
+            important details of your trip.
+        </p>
+
+        <a href="/#enquiry" class="button primary-button">
+            Plan Your Trip
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Bulayi Travel Agency. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

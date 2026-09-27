@@ -1,0 +1,82 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Bulayi Travel Agency | Management Portal{% endblock %}
+
+{% block branding %}
+<div id="site-name">
+    <a href="{% url 'admin:index' %}">
+        Bulayi Travel Agency
+    </a>
+</div>
+{% endblock %}
+
+{% block extrastyle %}
+<style>
+    :root {
+        --primary: #0D2B3E;
+        --secondary: #D4A23A;
+        --accent: #D4A23A;
+    }
+
+    #header {
+        background: #0D2B3E;
+    }
+
+    #header a:link,
+    #header a:visited {
+        color: #FFFFFF;
+    }
+
+    #site-name a {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    #branding h1 {
+        color: #FFFFFF;
+    }
+
+    .module h2,
+    .module caption,
+    .inline-group h2 {
+        background: #0D2B3E;
+    }
+
+    div.breadcrumbs {
+        background: #6D7F89;
+    }
+
+    a:link,
+    a:visited {
+        color: #0D2B3E;
+    }
+
+    .button,
+    input[type="submit"],
+    input[type="button"],
+    .submit-row input,
+    a.button {
+        background: #0D2B3E;
+    }
+
+    .button:hover,
+    input[type="submit"]:hover,
+    input[type="button"]:hover,
+    .submit-row input:hover,
+    a.button:hover {
+        background: #D4A23A;
+    }
+
+    .object-tools a {
+        background: #D4A23A;
+    }
+
+    .object-tools a:hover {
+        background: #0D2B3E;
+    }
+
+    #content-related .module h2 {
+        background: #0D2B3E;
+    }
+</style>
+{% endblock %}

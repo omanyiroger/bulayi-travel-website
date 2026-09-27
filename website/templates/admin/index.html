@@ -1,0 +1,11 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <div id="content-main">
+        {% if app_list %}
+            {% include "admin/app_list.html" with app_list=app_list show_changelinks=True %}
+        {% else %}
+            <p>No applications are available.</p>
+        {% endif %}
+    </div>
+{% endblock %}

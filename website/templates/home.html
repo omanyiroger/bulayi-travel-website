@@ -1,0 +1,782 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bulayi Travel Agency | Travel & Tourism Services in Kenya</title>
+
+<link rel="icon" type="image/jpeg"
+      href="{% static 'website/images/bulayi-searchicon-final.jpeg' %}">
+
+<link rel="canonical" href="https://bulayitravel.com/">
+    <meta name="description"
+          content="Bulayi Travel Agency helps you plan flights, holidays, visa assistance, accommodation and travel experiences from Kenya to destinations around the world.">
+
+    <!-- Social sharing / Open Graph -->
+    <meta property="og:title" content="Bulayi Travel Agency | Travel & Tourism Services in Kenya">
+    <meta property="og:description" content="Plan flights, holidays, visa assistance, accommodation and travel experiences from Kenya with Bulayi Travel Agency.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bulayitravel.com/">
+    <meta property="og:image" content="https://bulayitravel.com/static/website/images/bulayi-final.png">
+    <meta property="og:site_name" content="Bulayi Travel Agency">
+
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+
+    <!-- Bulayi Travel Agency Local SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Bulayi Travel Agency",
+        "url": "https://bulayitravel.com",
+        "logo": "https://bulayitravel.com/static/website/images/bulayi-final.png",
+        "image": "https://bulayitravel.com/static/website/images/bulayi-final.png",
+        "description": "Bulayi Travel Agency helps you plan flights, holidays, visa assistance, accommodation and travel experiences from Kenya to destinations around the world.",
+        "telephone": "+254725735856",
+        "email": "info@bulayitravel.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ruai",
+            "addressRegion": "Nairobi",
+            "addressCountry": "KE"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Kenya"
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar">
+    <div class="container nav-container">
+
+        <a href="/" class="logo">
+            <img src="{% static 'website/images/bulayi-final.png' %}"
+                 alt="Bulayi Travel Agency">
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu">
+            ☰
+        </button>
+
+        <!-- NAVIGATION MENU -->
+        <div class="nav-menu">
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#destinations">Destinations</a>
+                <a href="#about">Why Bulayi</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="https://wa.me/254725735856"
+               class="whatsapp-button"
+               target="_blank"
+               rel="noopener noreferrer">
+                WhatsApp Us
+            </a>
+
+            <a href="#enquiry" class="nav-button">
+                Plan Your Trip
+            </a>
+
+        </div>
+
+    </div>
+</header>
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+
+                <p class="eyebrow">
+                    TRAVEL WITH CONFIDENCE
+                </p>
+
+                <h1>
+                    Your journey begins
+                    <br>
+                    <span>with us.</span>
+                </h1>
+
+                <p class="hero-text">
+                    From flights and holidays to visas and unforgettable
+                    adventures, Bulayi Travel Agency makes your journey
+                    simpler, smoother and more memorable.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#enquiry" class="button primary-button">
+                        Start Your Journey
+                    </a>
+
+                    <a href="#services" class="button secondary-button">
+                        Explore Our Services
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICES ================= -->
+
+        <section class="section services" id="services">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        WHAT WE DO
+                    </p>
+
+                    <h2>
+                        Everything you need for
+                        <br>
+                        <span>a better journey.</span>
+                    </h2>
+
+                    <p>
+                        Whether you're travelling for business, leisure,
+                        family or adventure, we're here to make every step
+                        easier.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            ✈
+                        </div>
+
+                        <h3>
+                            Flight Bookings
+                        </h3>
+
+                        <p>
+                            Find and arrange flights that fit your schedule,
+                            destination and travel plans.
+                        </p>
+
+                        <a href="#enquiry">
+                            Plan a flight →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            🌍
+                        </div>
+
+                        <h3>
+                            Holiday Travel
+                        </h3>
+
+                        <p>
+                            Discover exciting destinations and let us help
+                            you create a holiday worth remembering.
+                        </p>
+
+                        <a href="#destinations">
+                            Explore destinations →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            🛂
+                        </div>
+
+                        <h3>
+                            Visa Assistance
+                        </h3>
+
+                        <p>
+                            Get guidance through your visa preparation and
+                            travel documentation process.
+                        </p>
+
+                        <a href="#enquiry">
+                            Get assistance →
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            🏨
+                        </div>
+
+                        <h3>
+                            Accommodation
+                        </h3>
+
+                        <p>
+                            Let us help you find accommodation suited to
+                            your destination and travel needs.
+                        </p>
+
+                        <a href="#enquiry">
+                            Find accommodation →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DESTINATIONS ================= -->
+
+        <section class="section destinations" id="destinations">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <p class="eyebrow">
+                        WHERE WILL YOU GO?
+                    </p>
+
+                    <h2>
+                        The world is waiting.
+                    </h2>
+
+                    <p>
+                        Tell us where you're headed and we'll help you
+                        take care of the journey.
+                    </p>
+
+                </div>
+
+
+                <div class="destination-grid">
+
+<a href="{% url 'dubai' %}" class="destination-card destination-one">
+
+    <div>
+        <span>
+            ASIA
+        </span>
+
+        <h3>
+            Dubai
+        </h3>
+    </div>
+
+</a>
+
+                    <a href="{% url 'zanzibar' %}" class="destination-card destination-two">
+
+                        <div>
+                            <span>
+                                AFRICA
+                            </span>
+
+                            <h3>
+                                Zanzibar
+                            </h3>
+                        </div>
+
+                    </a>
+
+
+                    <a href="{% url 'paris' %}" class="destination-card destination-three">
+
+                        <div>
+                            <span>
+                                EUROPE
+                            </span>
+
+                            <h3>
+                                Paris
+                            </h3>
+                        </div>
+
+                    </a>
+
+
+                    <a href="{% url 'guangzhou' %}" class="destination-card destination-four">
+
+                        <div>
+                            <span>
+                                ASIA
+                            </span>
+
+                            <h3>
+                                Guangzhou
+                            </h3>
+                        </div>
+                    </a>
+
+                    <!-- KENYA DESTINATIONS -->
+
+                    <a href="{% url 'nairobi' %}" class="destination-card nairobi">
+                        <div>
+                            <span>KENYA</span>
+                            <h3>Nairobi</h3>
+                        </div>
+                    </a>
+
+                    <a href="{% url 'mombasa' %}" class="destination-card mombasa">
+                        <div>
+                            <span>KENYA</span>
+                            <h3>Mombasa</h3>
+                        </div>
+                    </a>
+
+                    <a href="{% url 'kisumu' %}" class="destination-card kisumu">
+                        <div>
+                            <span>KENYA</span>
+                            <h3>Kisumu</h3>
+                        </div>
+                    </a>
+
+                    <a href="{% url 'nakuru' %}" class="destination-card nakuru">
+                        <div>
+                            <span>KENYA</span>
+                            <h3>Nakuru</h3>
+                        </div>
+                    </a>
+
+                    <a href="{% url 'eldoret' %}" class="destination-card eldoret">
+                        <div>
+                            <span>KENYA</span>
+                            <h3>Eldoret</h3>
+                        </div>
+                    </a>
+
+                </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY BULAYI ================= -->
+
+        <section class="section about" id="about">
+
+            <div class="container about-grid">
+
+                <div class="about-content">
+
+                    <p class="eyebrow">
+                        WHY BULAYI
+                    </p>
+
+                    <h2>
+                        More than a ticket.
+                        <br>
+                        <span>It's your journey.</span>
+                    </h2>
+
+                    <p>
+                        Travel should be exciting — not stressful.
+                        At Bulayi Travel Agency, we focus on making
+                        the process simple, personal and dependable.
+                    </p>
+
+                    <p>
+                        From the moment you start planning to the moment
+                        you reach your destination, we're here to help.
+                    </p>
+
+                    <a href="#enquiry" class="button primary-button">
+                        Talk to Us
+                    </a>
+
+                </div>
+
+
+                <div class="trust-box">
+
+                    <div class="trust-item">
+
+                        <strong>
+                            01
+                        </strong>
+
+                        <div>
+
+                            <h3>
+                                Personal Service
+                            </h3>
+
+                            <p>
+                                Your trip is planned around your needs.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <strong>
+                            02
+                        </strong>
+
+                        <div>
+
+                            <h3>
+                                Travel Guidance
+                            </h3>
+
+                            <p>
+                                Get practical assistance throughout
+                                your travel planning process.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <strong>
+                            03
+                        </strong>
+
+                        <div>
+
+                            <h3>
+                                Peace of Mind
+                            </h3>
+
+                            <p>
+                                We help take the uncertainty out of
+                                organising your journey.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ENQUIRY ================= -->
+
+        <section class="section enquiry" id="enquiry">
+
+            <div class="container">
+
+                <div class="enquiry-box">
+
+                    <div class="enquiry-content">
+
+                        <p class="eyebrow">
+                            LET'S PLAN
+                        </p>
+
+                        <h2>
+                            Where are you
+                            <br>
+                            going next?
+                        </h2>
+
+                        <p>
+                            Tell us about your travel plans and our team
+                            will help you take the next step.
+                        </p>
+
+                    </div>
+
+{% if submitted %}
+<div class="success-message">
+    <strong>Thank you for contacting Bulayi Travel Agency!</strong>
+    <p>Your enquiry has been received. Our team will review your request and get back to you shortly.</p>
+</div>
+{% endif %}
+<form class="enquiry-form" method="POST" action="">
+    {% csrf_token %}
+
+    <div class="form-row">
+        <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+        >
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Your email"
+            required
+        >
+    </div>
+
+    <div class="form-row">
+        <input
+            type="tel"
+            name="phone"
+            placeholder="Your phone number"
+            required
+        >
+
+        <select name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="Flight Booking">Flight Booking</option>
+            <option value="Holiday Travel">Holiday Travel</option>
+            <option value="Visa Assistance">Visa Assistance</option>
+            <option value="Accommodation">Accommodation</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <input
+            type="text"
+            name="destination"
+            placeholder="Destination"
+        >
+
+        <input
+            type="date"
+            name="travel_date"
+        >
+    </div>
+
+    <textarea
+        name="message"
+        rows="5"
+        placeholder="Tell us about your travel plans..."
+    ></textarea>
+
+    <button
+        type="submit"
+        class="button primary-button"
+    >
+        Send Enquiry
+    </button>
+</form>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container contact-grid">
+
+        <div>
+
+            <p class="eyebrow">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Ready to
+                <br>
+                <span>travel?</span>
+            </h2>
+
+        </div>
+
+
+        <div class="contact-details">
+
+            <!-- EMAIL -->
+            <div>
+
+                <small>
+                    EMAIL
+                </small>
+
+                <p>
+<a href="mailto:info@bulayitravel.com">
+            info@bulayitravel.com
+        </a>
+                </p>
+
+            </div>
+
+
+            <!-- PHONE -->
+            <div>
+
+                <small>
+                    PHONE
+                </small>
+
+                <p>
+                    <a href="tel:+254725735856">
+                        +254 725 735 856
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- LOCATION -->
+            <div>
+
+                <small>
+                    LOCATION
+                </small>
+
+                <p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=SK+Ruai+Nairobi+Kenya"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        SK Ruai, Nairobi, Kenya
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="/" class="logo">
+
+                    <img
+                        src="{% static 'website/images/bulayi-final.png' %}"
+                        alt="Bulayi Travel Agency"
+                    >
+
+                </a>
+
+                <p>
+                    Your journey begins with us.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#destinations">
+                    Destinations
+                </a>
+
+                <a href="#about">
+                    Why Bulayi
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container copyright">
+
+            <p>
+                © 2026 Bulayi Travel Agency. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/254725735856"
+   class="floating-whatsapp"
+   target="_blank"
+   aria-label="Chat with Bulayi Travel Agency on WhatsApp">
+    <span class="whatsapp-icon">☏</span>
+    <span>Chat with us</span>
+</a>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (!menuToggle || !navMenu) {
+        return;
+    }
+
+    menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+
+        const isOpen = navMenu.classList.contains('active');
+
+        menuToggle.setAttribute('aria-expanded', isOpen);
+        menuToggle.setAttribute(
+            'aria-label',
+            isOpen ? 'Close navigation menu' : 'Open navigation menu'
+        );
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            navMenu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        });
+    });
+
+});
+</script>
+</body>
+</html>
